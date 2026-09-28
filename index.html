@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>T0-do Liste</h1>
+        <section class="dashboard">
+            <div class="statistik">
+                <h2>Gesamt</h2>
+                <p id="gesamtAnzahl">0</p>
+            </div>
+            <div class="statistik">
+                <h2>Offen</h2>
+                <p id="offenAnzahl">0</p>
+            </div>
+            <div class="statistik">
+                <h2>Erledigt</h2>
+                <p id="erledigtAnzahl">0</p>
+            </div>
+        </section>
+        <section class="formularBereich">
+            <h2>Neue Aufgabe</h2>
+            <form id="aufgabenFormular">
+                <label for="titel">Titel</label>
+                <input
+                    type="text"
+                    id="titel"
+                    placeholder="Titel der Aufgabe"
+                >
+                <label for="beschreibung">Beschreibung</label>
+                <textarea
+                    id="beschreibung"
+                    placeholder="Beschreibung der Aufgabe"
+                ></textarea>
+                <label for="prioritaet">Priorität</label>
+                <select id="prioritaet">
+                    <option value="">Bitte auswählen</option>
+                    <option value="Hoch">Hoch</option>
+                    <option value="Mittel">Mittel</option>
+                    <option value="Niedrig">Niedrig</option>
+
+                </select>
+                <button type="submit">Aufgabe hinzufügen</button>
+            </form>
+            <p id="fehlermeldung"></p>
+        </section>
+        <section class="filterBereich">
+            <h2>Aufgaben filtern</h2>
+            <label for="statusFilter">Status</label>
+            <select id="statusFilter">
+                <option value="Alle">Alle</option>
+                <option value="Offen">Offen</option>
+                <option value="Erledigt">Erledigt</option>
+            </select>
+            <label for="prioritaetFilter">Priorität</label>
+            <select id="prioritaetFilter">
+                <option value="Alle">Alle Prioritäten</option>
+                <option value="Hoch">Hoch</option>
+                <option value="Mittel">Mittel</option>
+                <option value="Niedrig">Niedrig</option>
+            </select>
+        </section>
+        <section>
+            <h2>Meine Aufgaben</h2>
+            <div id="aufgabenListe"></div>
+        </section>
+    </main>
+</body>
+</html>
